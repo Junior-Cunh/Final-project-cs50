@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search Results
+{% endblock %}
+
+{% block main %}
+    {% if error %}
+        <div class="alert alert-danger mt-3">{{ error }}</div>
+    {% elif results %}
+        {% if external %}
+            <h3>Component found (NEXAR API):</h3>
+            <ul class="list-group mt-3">
+                <li class="list-group-item">
+                    <strong>{{ results[0].name }}</strong> — {{ results[0].manufacturer }}
+                    
+                    {% if results[0].specs %}
+                        <ul class="mt-2">
+                            {% for key, value in results[0].specs.items() %}
+                                <li>{{ key }}: {{ value }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+
+                    {% if results[0].datasheet %}
+                        <br><a href="{{ results[0].datasheet }}" target="_blank">Datasheet</a>
+                    {% endif %}
+                </li>
+            </ul>
+        {% else %}
+            <h3>Component found:</h3>
+            <ul class="list-group mt-3">
+                {% for component in results %}
+                    <li class="list-group-item">
+                        <strong>{{ component.name }}</strong> — {{ component.category }}
+
+                        {% if component.voltage_min or component.voltage_max %}
+                           | {% if component.voltage_min %}{{ component.voltage_min }}{% else %}…{% endif %}
+                           - {% if component.voltage_max %}{{ component.voltage_max }}{% else %}…{% endif %} V
+                        {% endif %}
+
+                        {% if component.current_min or component.current_max %}
+                           | {% if component.current_min %}{{ component.current_min }}{% else %}…{% endif %}
+                           - {% if component.current_max %}{{ component.current_max }}{% else %}…{% endif %} A
+                        {% endif %}
+
+                        {% if component.datasheet_link %}
+                            | <a href="{{ component.datasheet_link }}" target="_blank">Datasheet</a>
+                        {% endif %}
+
+                        <br>,
+                        <small>{{ component.notes }}</small>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% elif request.method == "POST" %}
+        <p>Component not found.</p>
+    {% endif %}
+{% endblock %}

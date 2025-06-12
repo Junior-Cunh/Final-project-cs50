@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block main %}
+    <form action="/search" class="mb-4" method="POST">
+        <div class="row">
+            <div class="col-md-4">
+                <input class="form-control" name="query" placeholder="Component name" type="text">
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <select class="form-control" name="category">
+                <option value="">All</option>
+                <option value="capacitor">Capacitor</option>
+                <option value="diode">Diode</option>
+                <option value="ics">ICs</option>
+                <option value="resistor">Resistor</option>
+                <option value="transistor">Transistor</option>
+            </select>
+        </div>
+
+        <div class="col-md-2">
+            <input class="form-control" name="voltage_min" placeholder="Min voltage (V)" type="number">
+        </div>
+        <div class="col-md-2">
+            <input class="form-control" name="voltage_max" placeholder="Max voltage (V)" type="number">
+        </div>
+        <div class="col-md-2 mt-2">
+            <input class="form-control" name="current_min" placeholder="Min current (A)" type="number">
+        </div>
+        <div class="col-md-2 mt-2">
+            <input class="form-control" name="current_max" placeholder="Max current (A)" type="number">
+        </div>
+        <div class="col-md-2 mt-2">
+            <button class="btn btn-primary w-100" type="submit">Search</button>
+        </div>
+    </form>
+
+{% endblock %}

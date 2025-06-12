@@ -1,2 +1,6 @@
 Flask
+Flask_sqlalchemy 
 Flask-Session
+sqlalchemy
+models
+pandas

@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   {{ category|capitalize }}
+{% endblock %}
+
+{% block main %}
+    <h2 class="mb-4">{{ category|capitalize }} components</h2>
+    {% if components %}    
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        {% for component in components %}
+            <div class="col">
+                <div class="card h-10 shadow-sm">
+                    <div class="card-body">
+                        <h6 class="card-title">{{ component.name }}</h6>
+                        <p class="card-text">
+                            <strong>Voltage min:</strong> {{ component.voltage_min }}<br>
+                            <strong>Voltage max:</strong> {{ component.voltage_max }}<br>
+                            <strong>Current min:</strong> {{ component.current_min }}<br>
+                            <strong>Current max:</strong> {{ component.current_max }}<br>
+                            <strong>Power:</strong> {{ component.power }}<br>
+                            <strong>Capacitance min:</strong> {{ component.capacitance_min }}<br>
+                            <strong>Capacitance max:</strong> {{ component.capacitance_max }}<br>
+                            <strong>Tolerance:</strong> {{ component.tolerance }}<br>
+                            <strong>Notes:</strong> {{ component.notes }}<br>
+                        </p>
+                    </div>
+                    <div class="class-footer">
+                        {% if component.datasheet_link %}
+                            <a class="btn btn-sm btn-primary" href="{{ component.datasheet_link }}" target="blank">Datasheet</a>
+                        {% else %}
+                            <span class="text-muted">Datasheet don't found</span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+    </div>
+
+    {% else %}
+        <p>No components found in this category</p>
+    {% endif %}
+{% endblock %}

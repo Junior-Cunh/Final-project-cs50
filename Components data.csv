@@ -1,0 +1,21 @@
+﻿id;name ;category;current_min;current_max;voltage_min;voltage_max;power;capacitance_min;capacitance_max;tolerance;datasheet_link;notes
+1;ceramic capacitor MCCHU Series ;capacitor;none;none;50;50;none;0.000000001;0.00000082;5;https://www.melopero.com/datasheets/Disc22pF.pdf;Ceramic capacitor
+2;ELECTROLYTIC CAPACITORS;capacitor;none;none;6.3;450;none;0.0000001;0.068;20;https://docs.rs-online.com/49da/0900766b80fa3a92.pdf;Eletrolytic capacitor
+3;293D;capacitor;none;none;4;75;none;0.0000001;0.001;5;https://www.vishay.com/docs/40002/293d.pdf;Tantalum capacitor
+4;B3236_;capacitor;none;none;250;480;none;0.000003;0.0006;5;https://product.tdk.com/system/files/dam/doc/product/capacitor/film/power/data_sheet/20/50/ds/b3236x.pdf;Film capacitor
+5;XT series;capacitor;none;none;3;3.3;none;255;555;5;https://www.eaton.com/content/dam/eaton/products/electronic-components/resources/data-sheet/eaton-xt-supercapacitors-cylindrical-cells-data-sheet.pdf;Super capacitor
+6;1N4007;diode;0.000005;0.00005;1.1;1.1;none;0.000000015;0.000000015;none;https://www.mouser.com/datasheet/2/149/1N4007-888322.pdf?srsltid=AfmBOopf_yUUcuafpucuASIi4ra9vJz5OE8C7JbAVOQWzVX6w78hyTDm;Rectifier diode
+7;1N4148;diode;0.000005;0.00005;1;1;none;0.00000004;0.000000004;none;https://www.vishay.com/docs/81857/1n4148.pdf;Small Signal Fast Switching Diodes
+8;1N4733;diode;0.049;0.89;5.1;5.1;none;none;none;none;https://datasheet.octopart.com/1N4733A-T-Diodes-Inc.-datasheet-8188104.pdf;Zener diode
+9;DSS25-0025B;diode;25;25;0.52;0.67;90;none;none;none;https://www.farnell.com/datasheets/20176.pdf;Schottky Diode
+10;LED 5mm;diode;0.03;0.15;3.3;4;0.12;0.0000001;0.0000001;none;https://www.farnell.com/datasheets/1519875.pdf;LED
+11;PC817_;diode;0.0025;0.03;1.2;1.4;none;0.00000003;0.00000025;none;https://www.farnell.com/datasheets/73758.pdf;Photocoupler
+12;NE555;ics;0.2;0.225;4.5;16;none;none;none;none;https://www.ti.com/lit/ds/symlink/ne555.pdf;Precision Timers
+13;LM358;ics;none;0.000035;3;30;none;none;none;none;https://www.ti.com/lit/ds/symlink/lm358.pdf;Industry-Standard Dual Operational Amplifiers
+14;sn74hc595;ics;none;0.02;2;6;none;0.00000001;0.00000001;none;https://www.ti.com/lit/ds/symlink/sn74hc595.pdf;Shift register
+15;LM317;ics;0.01;1.5;1.25;37;none;none;none;none;https://www.ti.com/lit/ds/symlink/lm317.pdf;Voltage regulator
+16;ATmega328;ics;none;0.2;2.7;5.5;none;none;none;none;https://docs.arduino.cc/resources/datasheets/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf;
+17;LM7805;ics;none;1.5;7;25;none;none;none;none;https://cdn.sparkfun.com/assets/1/7/7/3/2/LM7805.pdf;POSITIVE-VOLTAGE REGULATORS
+18;LM7812;ics;none;1.5;14.5;30;none;none;none;none;https://cdn.sparkfun.com/assets/1/7/7/3/2/LM7805.pdf;POSITIVE-VOLTAGE REGULATORS
+19;2N2222;transistor;none;0.00001;30;none;none;none;none;none;https://www.farnell.com/datasheets/296640.pdf;NPN Transistor
+20;MOV 07D471K;varistor;none;10;423;517;none;none;0.000000126;10;https://www.bourns.com/docs/product-datasheets/mov07d.pdf;Metal oxide varistor
